@@ -218,3 +218,21 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- paper-trail additions ---
+# Secrets: never commit real keys
+.env
+.env.*
+!.env.example
+
+# Frontend
+node_modules/
+frontend/dist/
+
+# Local uploaded documents
+backend/data/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

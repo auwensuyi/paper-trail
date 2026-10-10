@@ -76,8 +76,9 @@ pytest
 | 2 | Embeddings + pgvector | Embeddings, vector search, PDF parsing | RDS for PostgreSQL |
 | 3 | Streaming + chat history | Server-sent events, conversation state | — |
 | 4 | Evaluation | Measuring answer quality, regression tests | — |
-| 5 | Deploy to AWS | Containers, IaC, secrets | S3, ECS Fargate, ALB, RDS, Secrets Manager, Bedrock, IAM, VPC |
-| 6 | Users + production polish | Auth, monitoring, cost control | Cognito, CloudWatch, CloudFront, Budgets |
+| 5 | Deploy to AWS | Containers, Terraform, secrets | S3, ECS Fargate, ALB, RDS, Secrets Manager, Bedrock, IAM, VPC |
+| 6 | Users + production polish | Auth, monitoring, CI/CD | Cognito, CloudWatch, CloudFront, Budgets |
+| 7 | Kubernetes | kubectl, Helm, Ingress, storage | EKS (CKA practice) |
 
 Details and checklists are in [docs/ROADMAP.md](docs/ROADMAP.md).
 

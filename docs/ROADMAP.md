@@ -46,7 +46,7 @@ Each milestone ends with something that works. Write the code yourself first, th
 - [ ] API key moves to **Secrets Manager**; switch the LLM call to **Amazon Bedrock**
 - [ ] Run the backend on **ECS Fargate** behind an **Application Load Balancer**
 - [ ] Serve the frontend from **S3 + CloudFront**
-- [ ] Define it all with **AWS CDK** (Python) so it can be destroyed and rebuilt
+- [ ] Define it all with **Terraform** so it can be destroyed and rebuilt; keep state in an S3 backend
 - [ ] Draw the architecture: VPC, public/private subnets, security groups
 
 **Exam link:** almost every service here is core Solutions Architect material. Write down *why* you chose each one.
@@ -56,4 +56,15 @@ Each milestone ends with something that works. Write the code yourself first, th
 - [ ] Sign-up and login with **Cognito**; each user sees only their documents
 - [ ] Logs, metrics, and alarms in **CloudWatch**
 - [ ] Rate limiting and per-user cost tracking
-- [ ] GitHub Actions: run tests on every push, deploy on merge to `main`
+- [ ] GitHub Actions: run tests on every push; `terraform plan` on pull requests and `apply` on merge, using OIDC instead of stored AWS keys
+
+## Milestone 7: Kubernetes
+
+- [ ] Run Paper Trail on a local cluster with kind
+- [ ] Settings in a ConfigMap, the API key in a Secret
+- [ ] Postgres with a PersistentVolumeClaim
+- [ ] Expose the app through an Ingress; restrict traffic with a NetworkPolicy
+- [ ] Package it as a Helm chart
+- [ ] Deploy to **Amazon EKS**, with the cluster defined in Terraform
+
+**Exam link:** this milestone is your CKA lab. Do it with `kubectl` from the terminal, not a GUI.
